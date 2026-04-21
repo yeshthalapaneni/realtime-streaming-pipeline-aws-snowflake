@@ -1,0 +1,1 @@
+Snowflake is used as the analytics layer in this project. Data delivered to S3 is exposed to Snowflake through an external stage. Snowpipe continuously ingests new files into a raw events table. A Snowflake Stream captures incremental changes in the raw table, and a Task processes those records into a curated table for downstream analytics.
