@@ -1,0 +1,1 @@
+Lambda acts as the validation and routing layer. It validates incoming payloads, sends valid records to Kinesis Data Streams, and writes invalid records to an S3 error bucket for debugging and reprocessing.
