@@ -9,7 +9,7 @@ The goal is to demonstrate how to design and connect multiple cloud services to 
 ---
 
 ## Architecture Summary
-
+Realtime1arc.png
 The pipeline follows this flow:
 
 Postman → API Gateway → Lambda → Kinesis Data Streams → Kinesis Firehose → S3 → Snowflake (Snowpipe)
