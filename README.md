@@ -9,12 +9,49 @@ The goal is to demonstrate how to design and connect multiple cloud services to 
 ---
 
 ## Architecture Summary
-![image alt]([Realtime1arc.png](https://github.com/yeshthalapaneni/realtime-streaming-pipeline-aws-snowflake/blob/fbc8552787ba9ba2572656bf9293891a80267e1d/Realtime1arc.png))
+
 The pipeline follows this flow:
 
 Postman → API Gateway → Lambda → Kinesis Data Streams → Kinesis Firehose → S3 → Snowflake (Snowpipe)
 
 Data is generated using Postman and sent as HTTP requests to API Gateway. Lambda validates and routes the data. Valid records are streamed through Kinesis and delivered to S3 via Firehose. Snowflake continuously ingests the data from S3 using Snowpipe.
+
+
+
+
+
+
+
+![image alt](https://github.com/yeshthalapaneni/realtime-streaming-pipeline-aws-snowflake/blob/e62e040c5aa996c306fbf0fe268e5b984fed4b07/Realtime1arc.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 
