@@ -1,1 +1,28 @@
+## Architecture
 
+Postman
+  ↓
+Amazon API Gateway
+  ↓
+AWS Lambda
+  ├── Invalid records → S3 Error Bucket
+  ↓
+Amazon Kinesis Data Streams
+  ↓
+Amazon Kinesis Firehose
+  ↓
+Amazon S3 Raw Bucket
+  ↓
+Snowflake External Stage
+  ↓
+Snowpipe
+  ↓
+Raw Events Table
+  ↓
+Snowflake Stream
+  ↓
+Snowflake Task
+  ↓
+Curated Events Table
+
+This pipeline ingests event data through API Gateway, validates it in Lambda, streams valid records through Kinesis, lands them in S3 via Firehose, and continuously loads them into Snowflake using Snowpipe. Snowflake Streams and Tasks can then be used to transform raw events into curated analytics tables.
