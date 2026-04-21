@@ -152,12 +152,12 @@ Data is generated using Postman and sent as HTTP requests to API Gateway. Lambda
 
 ```json
 {
-  "event_id": "12345",
-  "user_id": "u1001",
-  "event_type": "purchase",
-  "amount": 249.99,
-  "event_time": "2026-04-21T10:15:30Z"
+"Id":"1",
+"Name":"John",
+"Age":"10",
+"Sex":"Male"
 }
+
 ```
 
 ---
